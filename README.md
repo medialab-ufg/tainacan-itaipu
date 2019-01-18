@@ -30,6 +30,10 @@ npm install
 ```
 this installed all dependences to theme
 
+### Build
+
+* Rename the config.sample.js to config.js
+
 Open the file config.js
 ```
 /** Set here the wp theme folder */
