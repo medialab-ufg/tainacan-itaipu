@@ -36,7 +36,7 @@ this installed all dependences to theme
 * Rename the config.sample.js to config.js
 
 Open the file config.js
-```
+```js
 /** Set here the wp theme folder */
 
 module.exports = {
