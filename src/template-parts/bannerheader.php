@@ -14,8 +14,12 @@
 							<img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
 						</a>
 						<div class="carousel-destaque--loop-content">
-							<strong><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></strong>
-							<span><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_excerpt(); ?></a></span>
+							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="carousel-destaque--loop-content-title">
+								<?php the_title(); ?>
+							</a>
+							<span class="carousel-destaque--loop-content-description">
+								<?php the_excerpt(); ?>
+							</span>
 						</div>
 					</li>
 				<?php endif; ?>

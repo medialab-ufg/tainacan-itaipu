@@ -12,7 +12,7 @@ function my_theme_enqueue_styles() {
         wp_get_theme()->get('Version')
     );
 
-    wp_enqueue_style( 'itaipu', get_stylesheet_directory_uri() . '/assets/scss/itaipu.min.css');
+    wp_enqueue_style( 'itaipu', get_stylesheet_directory_uri() . '/assets/css/itaipu.min.css');
 
     wp_enqueue_script('itaipujs', get_stylesheet_directory_uri() . '/assets/js/itaipu.min.js', array('jquery'), '', true);
 }
