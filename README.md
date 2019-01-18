@@ -24,7 +24,7 @@ Clone the repository
 git clone git@github.com:medialab-ufg/tainacan-itaipu.git
 ```
 
-Open the folder and execute
+Open the folder and run the command
 ```
 npm install
 ```
@@ -42,11 +42,11 @@ and set the folder of your wordpress themes
 
 salve and close.
 
-To finish execute to build and close the command
+To finish run the command to build and close the command
 ```
 gulp build
 ```
-or execute the command to build and wath the modifications
+or run the command to build and wath the modifications
 ```
 gulp
 ```
