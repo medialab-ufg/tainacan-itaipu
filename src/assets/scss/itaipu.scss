@@ -26,6 +26,9 @@
 			&.control__prev {
 				top: -279%;
 			}
+			&:focus {
+				outline: none;
+			}
 		}
 	}
 	.carousel-destaque--loop {
