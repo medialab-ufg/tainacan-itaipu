@@ -12,6 +12,7 @@ What things you need to install the theme
 
 ```
 git
+node
 npm
 ```
 
