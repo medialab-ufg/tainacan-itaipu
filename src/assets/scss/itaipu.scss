@@ -106,3 +106,24 @@
 		}
 	}
 }
+
+nav.menu-belowheader {
+	border-bottom-color: #b4b4b4 !important;
+}
+
+.slick-prev:before, .slick-next:before {
+	color: black;
+}
+
+.tainacan-list-post .tainacan-list-collection--container-card {
+	width: 100%;
+	.tainacan-list-collection--card-title {
+		max-width: 186px;
+	}
+}
+
+.slick-list.draggable {
+	max-width: 1400px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
