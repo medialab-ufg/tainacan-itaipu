@@ -6,6 +6,12 @@ Child theme of the Tainacan Interface theme for use with the Tainacan plugin
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
+### Require
+
+This child theme needs the theme Tainacan Interface installed to work
+
+https://github.com/tainacan/tainacan-theme
+
 ### Prerequisites installed
 
 What things you need to install the theme
