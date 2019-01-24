@@ -22,6 +22,8 @@ jQuery(document).ready(function($){
 		slidesToShow: 4,
 		slidesToScroll: 1,
 		variableWidth: true,
+		prevArrow: '<button type="button" data-role="none" class="front-page-list--collection-prev" aria-label="Previous" role="button" style="display: block;"><i class="mdi mdi-menu-left"></i></button>',
+		nextArrow: '<button type="button" data-role="none" class="front-page-list--collection-next" aria-label="Next" role="button" style="display: block;"><i class="mdi mdi-menu-right"></i></button>',
 		responsive: [
 			{
 			breakpoint: 1024,

@@ -1,8 +1,8 @@
-<div class="margin-one-column">
+<div class="margin-two-column">
 	<div class="container-fluid p-0 carousel-destaque">
 		<div class="carousel-destaque--control">
-			<button type="button" class="control__next"><i class="mdi mdi-chevron-down"></i></button>
 			<button type="button" class="control__prev"><i class="mdi mdi-chevron-up"></i></button>
+			<button type="button" class="control__next"><i class="mdi mdi-chevron-down"></i></button>
 		</div>
 		<ul class="carousel-destaque--loop">
 			<?php 

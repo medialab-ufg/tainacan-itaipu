@@ -16,4 +16,14 @@ function my_theme_enqueue_styles() {
 
     wp_enqueue_script('itaipujs', get_stylesheet_directory_uri() . '/assets/js/itaipu.min.js', array('jquery'), '', true);
 }
-?>
+
+/**
+ * Adiciona classes extras à lista de elementos que mudam de cor de acordo com a preferência do usuário
+ * 
+ */
+function add_class_customize($colors) {
+	return <<<CSS
+	.front-page h1 { color: {$colors['tainacan_link_color']}; }
+CSS;
+}
+add_filter('tainacan-customize-css-class', 'add_class_customize');

@@ -6,7 +6,10 @@ $args = array(
 $query = new WP_Query($args);
 
 if ( $query->have_posts() ) : ?>
-	<div class="tainacan-list-post front-page-list px-md-0 mt-5 margin-one-column">
+	<div class="tainacan-list-post front-page px-md-0 mt-5 margin-two-column">
+		<h1>Coleções em Destaque</h1>
+		<!-- <p>Subtítulo, se necessário for.</p> -->
+		<hr class="mi-hr title"/>
         <div class="tainacan-list-collection--container-card max-large front-page-list--collection">
 			<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 				<a class="tainacan-list-collection--card-link" href="<?php the_permalink(); ?>">
