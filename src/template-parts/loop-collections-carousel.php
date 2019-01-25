@@ -6,7 +6,7 @@ $args = array(
 $query = new WP_Query($args);
 
 if ( $query->have_posts() ) : ?>
-	<div class="tainacan-list-post front-page px-md-0 mt-5 margin-two-column">
+	<div class="tainacan-list-post front-page px-md-0 mt-5 margin-two-column max-large">
 		<h1>Coleções em Destaque</h1>
 		<!-- <p>Subtítulo, se necessário for.</p> -->
 		<hr class="mi-hr title"/>

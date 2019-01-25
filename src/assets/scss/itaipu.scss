@@ -214,6 +214,18 @@ nav.menu-belowheader {
 			}
 		}
 	}
+	.front-page-grid {
+		.front-page-grid-image {
+			img {
+				max-width: 100%;
+				width: 428px;
+				max-height: 100%;
+				height: 359px;
+				object-fit: cover;
+				object-position: center top;
+			}
+		}
+	}
 }
 
 hr.mi-hr {
