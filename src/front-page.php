@@ -68,6 +68,40 @@
 	<hr class="mi-hr title"/>
 </div>
 
-<section class="front-page mt-5"></section>
+<section class="front-page mt-5 max-large">
+	<div class="container-fluid front-page-grid p-0 m-0">
+		<div class="row m-0">
+			<div class="col-sm-7 front-page-grid--planeje-dados">
+				<p>A visitação ocorre de terça a sexta, das 10h às 17h e sábados, domingos e feriados, das 09h às 16h. As visitas mediadas ocorrem de terça a sexta e deverão ser agendadas através de contato telefônico (21-3701-2994/2966). O valor do ingresso é R$2,00 e têm direito a meia-entrada estudantes de nível fundamental e médio, professores e pessoas com necessidades especiais. A gratuidade é concedida para:</p>
+				<ul>
+					<li>Estudantes de nível fundamental e médio do ensino público;</li>
+					<li>Idosos (60 anos ou mais);</li>
+					<li>Estudantes de Museologia;</li>
+					<li>Museólogos;</li>
+					<li>Funcionários do IBRAM;</li>
+					<li>Membros do ICOM;</li>
+					<li>Moradores do Canto de Itaipu;</li>
+					<li>Portadores do cartão magnético do Vale-cultura – com direito a dois acompanhantes;</li>
+					<li>Crianças até 07 anos;</li>
+					<li>Visitas às quartas-feiras;</li>
+					<li>Guias de turismo com registro da Embratur.</li>
+				</ul>
+			</div>
+			<div class="col-sm p-0 front-page-grid--planeje-contato">
+				<div class="p-5">
+					<h5>Contato</h5>
+					<p>Telefones: </p>
+					<span>+55 (21) 3701-2994 / 2966</span>
+					<p>Endereço: </p>
+					<span>Praça de Itaipu S/N, Itaipu Niterói-RJ, Brasil <br> CEP 24340-005</span>
+					<p>E-mail: </p>
+					<span>mai@museus.gov.br</span>
+					<p>Facebook: </p>
+					<span>www.facebook.com/mai.ibram</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
 <?php get_footer();

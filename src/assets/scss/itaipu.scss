@@ -203,15 +203,25 @@ nav.menu-belowheader {
 		color: #fff;
 		.front-page-historico {
 			.media {
+				flex-wrap: wrap;
 				img {
 					max-width: 300px;
 				}
 				.media-body {
 					margin-left: 4.16666666667%;
 					line-height: 1.2;
+					@media only screen and (max-width: 576px) {
+						margin-top: 1rem;
+					}
 				}
 				margin-bottom: 2rem;
 			}
+		}
+	}
+	.front-page-exposicoes {
+		p {
+			color: #000;
+			font-size: 1rem;
 		}
 	}
 	.front-page-grid {
@@ -223,6 +233,43 @@ nav.menu-belowheader {
 				height: 359px;
 				object-fit: cover;
 				object-position: center top;
+			}
+		}
+		.front-page-grid--planeje-dados {
+			color: #000;
+			@media only screen and (max-width: 1799px) {
+				margin-left: 8.33333333334%;
+			}
+			padding-left: 0 !important;
+			padding-right: 12.5%;
+			p {
+				color: #000;
+				font-size: 1rem;
+			}
+			ul {
+				list-style: none;
+				li::before {
+					content: '\2022';
+					color: #740d03;
+					margin-left: -1em;
+					margin-right: 1em;
+				}
+			}
+		}
+		.front-page-grid--planeje-contato {
+			background-color: #740d03;
+			color: #fff;
+			h5 {
+				font-weight: 600;
+			}
+			p {
+				margin-bottom: 0;
+				margin-top: 1rem;
+			}
+			p, span {
+				color: #fff;
+				font-weight: 300;
+				font-size: 1rem;
 			}
 		}
 	}
@@ -240,4 +287,8 @@ hr.mi-hr {
     @media only screen and (max-width: 576px) {
         width: 280px;
     }
+}
+
+.tainacan-footer {
+	background-color: #740d03 !important;
 }
