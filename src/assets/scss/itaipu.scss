@@ -17,6 +17,10 @@
 		z-index: 2;
 		top: 46%;
 		@extend .center-absolute;
+		@media only screen and (max-width: 576px) {
+			width: 36px;
+			top: 8%;
+		}
 		button {
 			width: 40px;
 			height: 40px;
@@ -48,6 +52,10 @@
 			display: block;
 			padding-left: 4.16666666667%;
 			padding-right: 4.16666666667%;
+			@media only screen and (max-width: 576px) {
+				padding: 0;
+				max-width: 323px;
+			}
 		}
 
 		.slick-list {
@@ -55,7 +63,11 @@
 				> div {
 					li {
 						display: flex !important;
-    					align-items: center;
+						align-items: center;
+						@media only screen and (max-width: 576px) {
+							align-items: unset;
+							min-height: 490px;
+						}
 					}
 				}
 			}
@@ -69,6 +81,10 @@
 			display: block !important;
 			@extend .center-absolute;
 			right: 0;
+			@media only screen and (max-width: 576px) {
+				width: 35px;
+				top: 15%;
+			}
 			li {
 				width: 100%;
 				height: auto;
@@ -102,6 +118,11 @@
 			padding: 1rem 4.16666666667%;
 			position: absolute;
 			/* top: 28%; */
+			@media only screen and (max-width: 576px) {
+				bottom: 0;
+				max-width: 310px;
+				min-height: 222px;
+			}
 			.carousel-destaque--loop-content-title {
 				color: #333333;
 				font: {
@@ -111,12 +132,34 @@
 				&:hover {
 					text-decoration: none;
 				}
+				@media only screen and (max-width: 576px) {
+					font: {
+						size: 24px;
+						weight: 800;
+					}	
+				}
+				@media only screen and (min-width: 577px) and (max-width: 768px) {
+					font: {
+						size: 30px;
+					}	
+				}
 			}
 			.carousel-destaque--loop-content-description {
 				p {
 					font: {
 						size: 18px;
 						weight: 400;
+					}
+					@media only screen and (max-width: 576px) {
+						font: {
+							size: 14px;
+						}
+						margin-top: 1rem;
+					}
+					@media only screen and (min-width: 577px) and (max-width: 768px) {
+						font: {
+							size: 16px;
+						}	
 					}
 				}
 			}
@@ -291,4 +334,12 @@ hr.mi-hr {
 
 .tainacan-footer {
 	background-color: #740d03 !important;
+}
+
+.margin-two-column {
+	&.no-mobile {
+		@media only screen and (max-width: 576px) {
+			margin: 0 !important;
+		}
+	}
 }

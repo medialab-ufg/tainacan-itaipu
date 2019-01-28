@@ -1,5 +1,5 @@
 <?php if( have_posts() ) : ?>
-	<div class="margin-two-column">
+	<div class="margin-two-column no-mobile">
 		<div class="container-fluid p-0 carousel-destaque max-large">
 			<div class="carousel-destaque--control">
 				<button type="button" class="control__prev"><i class="mdi mdi-chevron-up"></i></button>
