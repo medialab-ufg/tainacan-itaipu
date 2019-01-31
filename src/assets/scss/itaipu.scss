@@ -354,6 +354,9 @@ hr.mi-hr {
 		img:not(.not-width) {
 			width: 140px;
 		}
+		.not-width {
+			width: 100%;
+		}
 	}
 }
 

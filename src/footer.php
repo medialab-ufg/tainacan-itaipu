@@ -52,10 +52,11 @@ if ( get_option( 'tainacan_blogphone' ) ) {
 		</div>
         <hr class="bg-scooter" style="background-color: #c34250 !important;"/>
         <div class="row p-4 tainacan-itaipu-footer--barra-logos text-white text-center">
+			<div class="col-12 col-sm d-none d-md-block"></div>
             <div class="col-12 col-sm mb-3 mb-md-0"><img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/sbm.png" alt=""></div>
             <div class="col-12 col-sm mb-3 mb-md-0"><img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/ibram.png" alt=""></div>
-            <div class="col-12 col-sm mb-3 mb-md-0"><img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/logo-ministeriodacultura.png" alt=""></div>
-            <div class="col-12 col-sm"><img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/nome-governo-federal.png" alt=""></div>
+            <div class="col-12 col-sm mb-3 mb-md-0"><img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/gov_horizontal.svg" class="not-width" alt=""></div>
+            <div class="col-12 col-sm d-none d-md-block"></div>
         </div>
 	</footer>
 <?php endif; ?>
