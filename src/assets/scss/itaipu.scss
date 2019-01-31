@@ -345,6 +345,16 @@ hr.mi-hr {
 
 .tainacan-footer {
 	background-color: #740d03 !important;
+	.tainacan-itaipu-footer--barra-logos {
+		padding-bottom: 50px !important;
+		margin-top: 50px;
+		.col-12 {
+			align-self: center;
+		}
+		img:not(.not-width) {
+			width: 140px;
+		}
+	}
 }
 
 .margin-two-column {
