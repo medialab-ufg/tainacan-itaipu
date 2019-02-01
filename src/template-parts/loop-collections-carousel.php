@@ -1,7 +1,9 @@
 <?php
 $args = array(
-    'post_type' => 'tainacan-collection',
-    'posts_per_page' => -1
+    'post_type' => "destaque-home",
+	'orderby' => 'menu_order',
+	'order' => 'ASC',
+	'posts_per_page' => -1
 );
 $query = new WP_Query($args);
 
@@ -11,8 +13,11 @@ if ( $query->have_posts() ) : ?>
 		<!-- <p>Subtítulo, se necessário for.</p> -->
 		<hr class="mi-hr title"/>
         <div class="tainacan-list-collection--container-card max-large front-page-list--collection">
-			<?php while ( $query->have_posts() ) : $query->the_post(); ?>
-				<a class="tainacan-list-collection--card-link" href="<?php the_permalink(); ?>">
+			<?php 
+				while ( $query->have_posts() ) : $query->the_post(); 
+				$url = get_post_meta($post->ID , 'destaque-url', true);
+			?>
+				<a class="tainacan-list-collection--card-link" href="<?php echo $url; ?>">
 					<div class="tainacan-list-collection--card">
 						<p class="tainacan-list-collection--card-title text-black text-left p-3 mb-0 text-truncate">
 							<?php the_title(); ?>           

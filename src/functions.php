@@ -27,3 +27,134 @@ function add_class_customize($colors) {
 CSS;
 }
 add_filter('tainacan-customize-css-class', 'add_class_customize');
+
+
+/** Post type destaque home */
+add_action('init', 'mai_destaque_post_type' );
+add_action('add_meta_boxes', 'mai_add_custom_box');
+add_action('save_post', 'mai_save_custom_box');
+
+function mai_destaque_post_type() {
+    $POST_TYPE_NAME_PLURAL = "Destaques";
+    $POST_TYPE_NAME_SINGULAR = "Destaque";
+
+    $post_type_labels = array(
+        'edit_item' => 'Editar',
+        'add_new' => 'Adicionar Novo',
+        'search_items' => 'Pesquisar',
+        'name' => $POST_TYPE_NAME_PLURAL,
+        'menu_name' => $POST_TYPE_NAME_PLURAL,
+        'singular_name' => $POST_TYPE_NAME_SINGULAR,
+        'new_item' => 'Novo ' . $POST_TYPE_NAME_PLURAL,
+        'view_item' => 'Visualizar ' . $POST_TYPE_NAME_PLURAL,
+        'add_new_item' =>'Adicionar ' . $POST_TYPE_NAME_PLURAL,
+        'parent_item_colon' => $POST_TYPE_NAME_PLURAL . ' acima:',
+        'not_found' => 'Nenhum ' . $POST_TYPE_NAME_PLURAL . ' encontrado',
+        'not_found_in_trash' => 'Nenhum ' . $POST_TYPE_NAME_PLURAL . ' encontrado na lixeira'
+    );
+    $post_type_args = array(
+        'labels' => $post_type_labels,
+        'public' => true,
+        'show_ui' => true,
+        'rewrite' => true,
+        'query_var' => true,
+        'can_export' => true,
+        'has_archive' => true,
+        'show_in_menu' => true,
+        'capability_type' => 'post',
+        'show_in_nav_menus' => false,
+        'publicly_queryable' => true,
+        'exclude_from_search' => true,
+        'supports' => array(
+            'title','editor','thumbnail','page-attributes'
+        ),
+    );
+
+    register_post_type("destaque-home", $post_type_args);
+}
+
+function mai_add_custom_box() {
+    add_meta_box('destaque_url',__('Informações'),
+                'destaque_home_custom_box', "destaque-home", 'advanced', 'high');
+}
+
+function mai_save_custom_box($post_id) {
+    global $post; 
+    if ($post && $post->post_type != "destaque-home") {
+        return $post_id;
+    }
+    save_destaque_home_custom_box($post_id);
+}
+
+function destaque_home_custom_box() {
+    global $post;
+    $nonce = wp_create_nonce(__FILE__);
+    $destaqueurl = get_post_meta($post->ID, 'destaque-url', true);
+
+    require_once dirname( __FILE__ ) . '/inc/destaque_home/metabox-destaque-home.php' ;
+}
+
+function save_destaque_home_custom_box($post_id) {
+    if (empty($_POST)) {
+        return $post_id;
+    }
+    // Verifica o nonce
+    if (!wp_verify_nonce($_POST['destaque_custom_box'], __FILE__)) {
+        return $post_id;
+    }
+    // Não pode editar o Destaque?
+    if (!current_user_can('edit_post', $post_id)) {
+        return $post_id;
+    }
+    $fields = array('url');
+    $data = $_POST['destaque'];
+    foreach ($data AS $field => $value) {
+        if (!in_array($field, $fields)) {
+            continue;
+        }
+        update_post_meta($post_id, 'destaque-' . $field, $value);
+    }
+}
+
+function get_post_type_name() {
+    return "destaque-home";
+}
+
+function mai_get_destaques($area = 'home', $posicao = 1, $limite = 5, $params = array()) {
+    $params = array_merge(array(
+        'post_type' => "destaque-home",
+        'orderby' => 'menu_order',
+        'order' => 'ASC',
+        'posts_per_page' => -1
+    ), $params);
+    
+    switch ($area) {
+        case 'home':
+            $params = array_merge($params, array(
+                'meta_key' => 'destaque-home_site',
+                'meta_value' => '1',
+            ));
+            break;
+        case 'area':
+            $params = array_merge($params, array(
+                'meta_key' => 'destaque-home_area',
+                'meta_value' => '1',
+            ));
+            break;
+    }
+    
+    $destaques = query_posts($params);
+    $i = 1;
+    foreach ($destaques as $k => &$destaque) {
+        $destaque->posicao = (int)get_post_meta($destaque->ID, 'destaque-posicao', true);
+        $destaque->url = get_post_meta($destaque->ID, 'destaque-url', true);
+        if ($destaque->posicao != $posicao) {
+            unset($destaques[$k]);
+            continue;
+        }
+        if ($i++ > $limite) {
+            unset($destaques[$k]);
+        }
+    }
+    return $destaques;
+}
