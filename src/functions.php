@@ -116,45 +116,61 @@ function save_destaque_home_custom_box($post_id) {
     }
 }
 
-function get_post_type_name() {
-    return "destaque-home";
+
+/** Front Page */
+
+add_action( 'add_meta_boxes', 'informacoes_front_meta_boxes' );
+function informacoes_front_meta_boxes() {
+    global $post;
+    if(!empty($post)) :
+        $pageTitle = get_the_title($post->ID);
+        if($pageTitle == 'front-page' ) :
+            add_meta_box( 'informacaos', 'Informações', 'informacoes_front_display_callback', 'page' );
+        endif;
+    endif;
 }
 
-function mai_get_destaques($area = 'home', $posicao = 1, $limite = 5, $params = array()) {
-    $params = array_merge(array(
-        'post_type' => "destaque-home",
-        'orderby' => 'menu_order',
-        'order' => 'ASC',
-        'posts_per_page' => -1
-    ), $params);
+function informacoes_front_display_callback() {
+    global $post;
+    $nonce = wp_create_nonce(__FILE__);
+    $telefone_front = get_post_meta($post->ID, 'informacoes-front-telefone', true);
+    $endereco_front = get_post_meta($post->ID, 'informacoes-front-endereco', true);
+    $cep_front = get_post_meta($post->ID, 'informacoes-front-cep', true);
+    $facebook_front = get_post_meta($post->ID, 'informacoes-front-facebook', true);
+
+    require_once dirname( __FILE__ ) . '/inc/infomacoes-front/metabox-infomacoes-front.php' ;
+}
+
+add_action('save_post', 'informacoes_front_save_custom_box',10,1);
+function informacoes_front_save_custom_box($post_id) {
+    global $post; 
+    $pageTitle = get_the_title($post->ID);
     
-    switch ($area) {
-        case 'home':
-            $params = array_merge($params, array(
-                'meta_key' => 'destaque-home_site',
-                'meta_value' => '1',
-            ));
-            break;
-        case 'area':
-            $params = array_merge($params, array(
-                'meta_key' => 'destaque-home_area',
-                'meta_value' => '1',
-            ));
-            break;
+    if ($post && $post->ID != $post_id) {
+        return $error;
     }
-    
-    $destaques = query_posts($params);
-    $i = 1;
-    foreach ($destaques as $k => &$destaque) {
-        $destaque->posicao = (int)get_post_meta($destaque->ID, 'destaque-posicao', true);
-        $destaque->url = get_post_meta($destaque->ID, 'destaque-url', true);
-        if ($destaque->posicao != $posicao) {
-            unset($destaques[$k]);
+    save_informacoes_front_custom_box($post_id);
+}
+
+function save_informacoes_front_custom_box($post_id) {
+    if (empty($_POST)) {
+        return $post_id;
+    }
+
+    // Verifica o nonce
+    if (!wp_verify_nonce($_POST['informacoes_front_custom_box'], __FILE__)) {
+        return $post_id;
+    }
+    // Não pode editar?
+    if (!current_user_can('edit_page', $post_id)) {
+        return $post_id;
+    }
+    $fields = array('telefone', 'endereco', 'cep', 'facebook');
+    $data = $_POST['informacoes'];
+    foreach ($data AS $field => $value) {
+        if (!in_array($field, $fields)) {
             continue;
         }
-        if ($i++ > $limite) {
-            unset($destaques[$k]);
-        }
+        update_post_meta($post_id, 'informacoes-front-' . $field, $value);
     }
-    return $destaques;
 }
