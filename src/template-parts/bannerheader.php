@@ -1,4 +1,6 @@
-<?php if( have_posts() ) : ?>
+<?php
+$posts = new WP_Query( array( 'post_type' => 'post' ) );
+if( $posts->have_posts() ) : ?>
 	<div class="margin-two-column no-mobile">
 		<div class="container-fluid p-0 carousel-destaque max-large">
 			<div class="carousel-destaque--control">
@@ -7,7 +9,7 @@
 			</div>
 			<ul class="carousel-destaque--loop">
 				<?php 
-					while ( have_posts() ) : the_post();
+					while ( $posts->have_posts() ) : $posts->the_post();
 				?>
 					<?php if( has_post_thumbnail() ) : ?>
 						<li>
