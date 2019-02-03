@@ -112,7 +112,7 @@ if($planeje->have_posts()) :
 							<p>E-mail: </p>
 							<span>mai@museus.gov.br</span>
 							<p>Facebook: </p>
-							<span><?php echo $facebook_front; ?></span>
+							<a style="color: #fff; float: right;" href="<?php echo $facebook_front; ?>"><?php echo $facebook_front; ?></a>
 						</div>
 					</div>
 				</div>
