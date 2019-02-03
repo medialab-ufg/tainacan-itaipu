@@ -124,7 +124,7 @@ function informacoes_front_meta_boxes() {
     global $post;
     if(!empty($post)) :
         $pageTitle = get_the_title($post->ID);
-        if($pageTitle == 'front-page' ) :
+        if($pageTitle == 'pagina-principal' ) :
             add_meta_box( 'informacaos', 'Informações', 'informacoes_front_display_callback', 'page' );
         endif;
     endif;

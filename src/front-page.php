@@ -9,7 +9,7 @@
 
 <!-- Dados para exibição na seção de planeje sua visita -->
 <?php
-	$page = get_page_by_title( 'front-page' );
+	$page = get_page_by_title( 'pagina-principal' );
 	$telefone_front = get_post_meta($page->ID, 'informacoes-front-telefone', true);
 	$endereco_front = get_post_meta($page->ID, 'informacoes-front-endereco', true);
 	$cep_front = get_post_meta($page->ID, 'informacoes-front-cep', true);
