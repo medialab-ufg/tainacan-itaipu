@@ -30,4 +30,4 @@ if( $posts->have_posts() ) : ?>
 			</ul>	
 		</div>
 	</div>
-<?php endif; ?>
+<?php wp_reset_postdata(); endif; ?>

@@ -39,7 +39,7 @@ if($historico->have_posts()) :
 			</section>
 		</div>
 	<?php endwhile; ?>
-<?php endif; wp_reset_postdata(); ?>
+<?php wp_reset_postdata(); endif; ?>
 
 <!-- Seção Exposições -->
 <?php
@@ -54,7 +54,7 @@ if($exposicoes->have_posts()) :
 			</section>
 		</div>
 	<?php endwhile; ?>
-<?php endif; wp_reset_postdata(); ?>
+<?php wp_reset_postdata(); endif; ?>
 
 <!-- Seção de grid de itens ou coleções -->
 <div class="front-page mt-5 pb-5 max-large">
@@ -119,6 +119,6 @@ if($planeje->have_posts()) :
 			</div>
 		</section>
 	<?php endwhile; ?>
-<?php endif; wp_reset_postdata(); ?>
+<?php wp_reset_postdata(); endif; ?>
 
 <?php get_footer();
