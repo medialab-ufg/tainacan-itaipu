@@ -124,7 +124,7 @@ function informacoes_front_meta_boxes() {
     global $post;
     if(!empty($post)) :
         $pageTitle = get_the_title($post->ID);
-        if($pageTitle == 'pagina-principal' ) :
+        if($pageTitle == 'Planeje sua Visita' ) :
             add_meta_box( 'informacaos', 'Informações', 'informacoes_front_display_callback', 'page' );
         endif;
     endif;
@@ -147,7 +147,7 @@ function informacoes_front_save_custom_box($post_id) {
     $pageTitle = get_the_title($post->ID);
     
     if ($post && $post->ID != $post_id) {
-        return $error;
+        return $post_id;
     }
     save_informacoes_front_custom_box($post_id);
 }
