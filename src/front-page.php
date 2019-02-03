@@ -32,7 +32,8 @@ if($historico->have_posts()) :
 				<div class="media mt-3">
 					<img src="<?php echo get_the_post_thumbnail_url(); ?>" class="mr-3" alt="...">
 					<div class="media-body">
-						<?php the_content(); ?>
+						<?php the_excerpt(); ?>
+						<a href="<?php the_permalink(); ?>">Leia mais...</a>
 					</div>
 				</div>
 			</section>
