@@ -18,7 +18,7 @@
 
 <!-- Seção Histórico do Museu -->
 <?php
-$historico = new WP_Query( array( 'pagename' => 'front-page/historico-do-museu' ) );
+$historico = new WP_Query( array( 'pagename' => 'pagina-principal/historico-do-museu' ) );
 if($historico->have_posts()) :
 	while($historico->have_posts()) : $historico->the_post(); ?>
 		<div class="front-page mt-5 margin-two-column max-large">
@@ -42,7 +42,7 @@ if($historico->have_posts()) :
 
 <!-- Seção Exposições -->
 <?php
-$exposicoes = new WP_Query( array( 'pagename' => 'front-page/exposicoes' ) );
+$exposicoes = new WP_Query( array( 'pagename' => 'pagina-principal/exposicoes' ) );
 if($exposicoes->have_posts()) :
 	while($exposicoes->have_posts()) : $exposicoes->the_post(); ?>
 		<div class="front-page mt-5 margin-two-column max-large">
@@ -74,7 +74,7 @@ if($exposicoes->have_posts()) :
 
 <!-- Seção planeje sua visita -->
 <?php
-$planeje = new WP_Query( array( 'pagename' => 'front-page/planeje-sua-visita' ) );
+$planeje = new WP_Query( array( 'pagename' => 'pagina-principal/planeje-sua-visita' ) );
 if($planeje->have_posts()) :
 	while($planeje->have_posts()) : $planeje->the_post(); ?>
 		<div class="front-page mt-5 margin-two-column max-large">
