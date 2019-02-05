@@ -58,18 +58,14 @@ if($exposicoes->have_posts()) :
 
 <!-- Seção de grid de itens ou coleções -->
 <div class="front-page mt-5 pb-5 max-large">
-	<div class="container-fluid front-page-grid p-0 m-0">
-		<div class="row m-0">
-			<div class="col-sm p-0 front-page-grid-image">
-				<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/gaviao.png'; ?>" alt="">
+	<div class="container-fluid d-flex flex-wrap justify-content-center front-page-grid p-0 m-0">
+		<?php foreach(get_images_to_front_grid() as $id => $image) :?>
+			<div class="m-2 front-page-grid-image">
+				<a href="<?php echo $image['link']; ?>">
+					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/'.$image["name"].'.png'; ?>" alt="">
+				</a>
 			</div>
-			<div class="col-sm p-0 front-page-grid-image">
-				<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/gaviao.png'; ?>" alt="">
-			</div>
-			<div class="col-sm p-0 front-page-grid-image">
-				<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/gaviao.png'; ?>" alt="">
-			</div>
-		</div>
+		<?php endforeach; ?>
 	</div>
 </div>
 

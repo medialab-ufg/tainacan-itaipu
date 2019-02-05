@@ -174,3 +174,46 @@ function save_informacoes_front_custom_box($post_id) {
         update_post_meta($post_id, 'informacoes-front-' . $field, $value);
     }
 }
+
+function get_images_to_front_grid() {
+    $images = [
+        '1' => [
+            'name' => 'CAMS-001_2',
+            'link' => ''
+        ],
+        '2' => [
+            'name' => 'CAMS-014_2',
+            'link' => ''
+        ],
+        '3' => [
+            'name' => 'JC-18-209_3',
+            'link' => ''
+        ],
+        '4' => [
+            'name' => 'JC-18-413_1',
+            'link' => ''
+        ],
+        '5' => [
+            'name' => 'JC-18-960-Duplicado_2',
+            'link' => ''
+        ],
+        '6' => [
+            'name' => 'PST-001_1',
+            'link' => ''
+        ],
+        '7' => [
+            'name' => 'RMN-103_1',
+            'link' => ''
+        ],
+        '8' => [
+            'name' => 'RPR-6_1',
+            'link' => ''
+        ],
+        '9' => [
+            'name' => 'TMT-02_1',
+            'link' => ''
+        ]
+    ];
+
+    return $images;
+}
