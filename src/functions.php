@@ -179,39 +179,39 @@ function get_images_to_front_grid() {
     $images = [
         '1' => [
             'name' => 'CAMS-001_2',
-            'link' => ''
+            'link' => get_permalink(12094)
         ],
         '2' => [
             'name' => 'CAMS-014_2',
-            'link' => ''
+            'link' => get_permalink(12174)
         ],
         '3' => [
             'name' => 'JC-18-209_3',
-            'link' => ''
+            'link' => get_permalink(16750)
         ],
         '4' => [
             'name' => 'JC-18-413_1',
-            'link' => ''
+            'link' => get_permalink(18368)
         ],
         '5' => [
             'name' => 'JC-18-960-Duplicado_2',
-            'link' => ''
+            'link' => get_permalink(18024)
         ],
         '6' => [
             'name' => 'PST-001_1',
-            'link' => ''
+            'link' => get_permalink(11998)
         ],
         '7' => [
             'name' => 'RMN-103_1',
-            'link' => ''
+            'link' => get_permalink(19652)
         ],
         '8' => [
             'name' => 'RPR-6_1',
-            'link' => ''
+            'link' => get_permalink(12046)
         ],
         '9' => [
             'name' => 'TMT-02_1',
-            'link' => ''
+            'link' => get_permalink(12080)
         ]
     ];
 
