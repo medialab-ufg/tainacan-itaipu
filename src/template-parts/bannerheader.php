@@ -1,6 +1,6 @@
 <?php
-$posts = new WP_Query( array( 'post_type' => 'post' ) );
-if( $posts->have_posts() ) : ?>
+$posts_to_front = new WP_Query( array( 'post_type' => 'post' ) );
+if( $posts_to_front->have_posts() ) : ?>
 	<div class="margin-two-column no-mobile">
 		<div class="container-fluid p-0 carousel-destaque max-large">
 			<div class="carousel-destaque--control">
@@ -9,7 +9,7 @@ if( $posts->have_posts() ) : ?>
 			</div>
 			<ul class="carousel-destaque--loop">
 				<?php 
-					while ( $posts->have_posts() ) : $posts->the_post();
+					while ( $posts_to_front->have_posts() ) : $posts_to_front->the_post();
 				?>
 					<?php if( has_post_thumbnail() ) : ?>
 						<li>
@@ -30,4 +30,4 @@ if( $posts->have_posts() ) : ?>
 			</ul>	
 		</div>
 	</div>
-<?php wp_reset_postdata(); endif; ?>
+<?php endif; wp_reset_postdata(); ?>
