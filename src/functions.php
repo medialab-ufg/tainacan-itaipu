@@ -23,7 +23,7 @@ function my_theme_enqueue_styles() {
  */
 function add_class_customize($colors) {
 	return <<<CSS
-	.front-page h1 { color: {$colors['tainacan_link_color']}; }
+	.front-page h1, .tainacan-single-post article .tainacan-content h1 { color: {$colors['tainacan_link_color']}; }
 CSS;
 }
 add_filter('tainacan-customize-css-class', 'add_class_customize');
