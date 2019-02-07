@@ -1,4 +1,4 @@
-<div class="col-6 d-flex mb-5">
+<div class="col-12 col-md-12 d-flex mb-5">
     <?php if ( has_post_thumbnail() ) : ?>
         <div class="col-xs-12 col-md-4 blog-thumbnail align-self-center text-center mb-4 mb-md-0">
             <a href="<?php the_permalink(); ?>">
