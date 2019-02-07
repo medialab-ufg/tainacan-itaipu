@@ -255,6 +255,7 @@ noscript {
 			max-height: 450px;
 			display: block;
 			object-fit: cover;
+			object-position: center 25%;
 			padding-left: 4.16666666667%;
 			padding-right: 4.16666666667%;
 			@media only screen and (max-width: 576px) {
@@ -654,5 +655,20 @@ body.contraste {
 			border-right: 1px solid #fff !important;
 			border-bottom: 1px solid #fff !important;
 		}
+	}
+}
+
+.btn-mai {
+	color: #fff;
+    background-color: #25a189;
+	border-color: #25a189;
+	border-radius: 0;
+	&:hover {
+		color: #fff;
+		background-color: #25a189;
+		border-color: #25a189;
+	}
+	&:focus {
+		box-shadow: none;
 	}
 }
