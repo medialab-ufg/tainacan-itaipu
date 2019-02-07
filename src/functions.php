@@ -33,13 +33,18 @@ add_filter('tainacan-customize-css-class', 'add_class_customize');
 
 
 /** Post type destaque home */
-add_action('init', 'mai_destaque_post_type' );
+add_action('init', 'registrar_post_type' );
 add_action('add_meta_boxes', 'mai_add_custom_box');
 add_action('save_post', 'mai_save_custom_box');
 
-function mai_destaque_post_type() {
-    $POST_TYPE_NAME_PLURAL = "Destaques";
-    $POST_TYPE_NAME_SINGULAR = "Destaque";
+function registrar_post_type() {
+    mai_post_types('Destaques Coleções', 'Destaque Coleção', 'destaque-home');
+    mai_post_types('Destaques Posts', 'Destaque Post', 'destaque-post');
+}
+
+function mai_post_types($plural_name, $singular_name, $post_type) {
+    $POST_TYPE_NAME_PLURAL = $plural_name;
+    $POST_TYPE_NAME_SINGULAR = $singular_name;
 
     $post_type_labels = array(
         'edit_item' => 'Editar',
@@ -71,9 +76,10 @@ function mai_destaque_post_type() {
         'supports' => array(
             'title','editor','thumbnail','page-attributes'
         ),
+        'show_in_rest' => true
     );
 
-    register_post_type("destaque-home", $post_type_args);
+    register_post_type($post_type, $post_type_args);
 }
 
 function mai_add_custom_box() {
@@ -147,7 +153,6 @@ function informacoes_front_display_callback() {
 add_action('save_post', 'informacoes_front_save_custom_box',10,1);
 function informacoes_front_save_custom_box($post_id) {
     global $post; 
-    $pageTitle = get_the_title($post->ID);
     
     if ($post && $post->ID != $post_id) {
         return $post_id;
