@@ -9,7 +9,7 @@
 				</div>
 			</div>
 		<?php } ?>
-		<hr class="bg-scooter"/>
+		<hr class="bg-scooter" style="background-color: #c34250 !important;"/>
 		<div class="row p-4 tainacan-footer-info">
 			<div class="col text-white font-weight-normal">
 				<p class="tainacan-footer-info--blog">
