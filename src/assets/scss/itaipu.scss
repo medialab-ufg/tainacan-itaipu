@@ -1,7 +1,7 @@
 .center-absolute {
 	position: absolute;
     margin-left: -50px;
-    top: 50%;
+    top: 52%;
     margin-top: -50px;
     overflow: hidden;
 }
@@ -15,7 +15,7 @@
 		height: auto;
 		right: 4px;
 		z-index: 2;
-		top: 46%;
+		top: 43%;
 		@extend .center-absolute;
 		@media only screen and (max-width: 576px) {
 			width: 36px;
@@ -49,6 +49,7 @@
 		list-style: none;
 		img {
 			width: 100%;
+			max-height: 450px;
 			display: block;
 			padding-left: 4.16666666667%;
 			padding-right: 4.16666666667%;
@@ -80,7 +81,7 @@
 			padding: 10px 0 30px;
 			display: block !important;
 			@extend .center-absolute;
-			right: 0;
+			right: -1px;
 			@media only screen and (max-width: 576px) {
 				width: 35px;
 				top: 15%;

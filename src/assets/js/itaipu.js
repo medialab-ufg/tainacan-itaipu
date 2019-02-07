@@ -52,4 +52,7 @@ jQuery(document).ready(function($){
 			// instead of a settings object
 		]
 	});
+
+	$('.menu-belowheader .margin-one-column').toggleClass('margin-one-column margin-two-column');
+	$('nav[aria-label=breadcrumb]').toggleClass('margin-one-column margin-two-column');
 });
