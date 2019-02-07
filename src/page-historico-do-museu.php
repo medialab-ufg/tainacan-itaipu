@@ -4,7 +4,7 @@
 <?php get_template_part( 'template-parts/bannerheader' ); ?>
 <!-- Get the menu if is create in panel admin -->
 <?php get_template_part( 'template-parts/menubellowbanner' ); ?>
-
+<div id="content"></div>
 <!-- Seção Histórico do Museu -->
 <?php
 $historico = new WP_Query( array( 'pagename' => 'pagina-principal/historico-do-museu' ) );

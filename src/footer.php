@@ -1,5 +1,5 @@
 <?php if ( ! is_404() ) : ?>
-	<footer class="container-fluid p-4 p-sm-5 mt-5 tainacan-footer" style="padding-bottom: 0 !important;">
+	<footer id="footer" class="container-fluid p-4 p-sm-5 mt-5 tainacan-footer" style="padding-bottom: 0 !important;">
 		<?php if ( is_active_sidebar( 'tainacan-sidebar-footer' ) ) { ?>
 			<div class="row">
 				<div class="col-12 col-lg">
@@ -61,6 +61,7 @@ if ( get_option( 'tainacan_blogphone' ) ) {
 	</footer>
 <?php endif; ?>
 <?php wp_footer(); ?>
+<script defer="defer" src="//barra.brasil.gov.br/barra.js" type="text/javascript"></script>
 </body>
 
 </html>

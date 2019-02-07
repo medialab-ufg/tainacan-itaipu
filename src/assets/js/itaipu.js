@@ -53,6 +53,62 @@ jQuery(document).ready(function($){
 		]
 	});
 
+	base.acessibilidade.iniciar();
+	base.acessibilidade.manipularFontes();
+	base.acessibilidade.ativarAltoContraste();
+	base.jsNaoObstrusivo.ativar();
+
 	$('.menu-belowheader .margin-one-column').toggleClass('margin-one-column margin-two-column');
 	$('nav[aria-label=breadcrumb]').toggleClass('margin-one-column margin-two-column');
+	$('main[role=main]').toggleClass('margin-one-column margin-two-column');
 });
+
+var base = {
+	acessibilidade: {
+		iniciar: function() {
+			accessibilityCounter = 0;
+		},
+
+		manipularFontes: function() {
+			jQuery('.button-text-minus').on('click',function() {
+				if (accessibilityCounter > -3) {
+					var _html = jQuery('html'),
+						fonte = _html.css('font-size'),
+						tamanho = fonte.split('px');
+
+					_html.css('font-size', (parseInt(tamanho[0]) - 2));
+					accessibilityCounter--;
+				}
+			});
+
+			jQuery('.button-text-default').on('click',function() {
+				jQuery('html').css('font-size','1rem');
+				accessibilityCounter = 0;
+			});
+
+			jQuery('.button-text-plus').on('click',function() {
+				if (accessibilityCounter < 3) {
+					var _html = jQuery('html'),
+						fonte = _html.css('font-size'),
+						tamanho = fonte.split('px');
+
+					_html.css('font-size', (parseInt(tamanho[0]) + 3));
+					accessibilityCounter++;
+				}
+			});
+		},
+
+		ativarAltoContraste: function() {
+			jQuery('.button-high-contrast').on('click',function() {
+				jQuery('body').toggleClass('contraste');
+			});
+		}
+	},
+
+	jsNaoObstrusivo: {
+		ativar: function() {
+			jQuery('body').addClass('js');
+		}
+	}
+
+};

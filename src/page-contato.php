@@ -13,7 +13,7 @@
 	$cep_front = get_post_meta($page->ID, 'informacoes-front-cep', true);
 	$facebook_front = get_post_meta($page->ID, 'informacoes-front-facebook', true);
 ?>
-
+<div id="content"></div>
 <!-- Seção planeje sua visita -->
 <?php if(have_posts()) :
 	while(have_posts()) : the_post(); ?>

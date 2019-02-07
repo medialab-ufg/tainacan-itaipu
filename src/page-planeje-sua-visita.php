@@ -13,7 +13,7 @@
 	$cep_front = get_post_meta($page->ID, 'informacoes-front-cep', true);
 	$facebook_front = get_post_meta($page->ID, 'informacoes-front-facebook', true);
 ?>
-
+<div id="content"></div>
 <!-- Seção planeje sua visita -->
 <?php
 $planeje = new WP_Query( array( 'pagename' => 'pagina-principal/planeje-sua-visita' ) );

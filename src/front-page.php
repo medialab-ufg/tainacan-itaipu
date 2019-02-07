@@ -5,6 +5,7 @@
 <!-- Get the menu if is create in panel admin -->
 <?php get_template_part( 'template-parts/menubellowbanner' ); ?>
 
+<div id="content"></div>
 <?php get_template_part( 'template-parts/loop-collections-carousel' ); ?>
 
 <!-- Dados para exibição na seção de planeje sua visita -->
@@ -15,7 +16,6 @@
 	$cep_front = get_post_meta($page->ID, 'informacoes-front-cep', true);
 	$facebook_front = get_post_meta($page->ID, 'informacoes-front-facebook', true);
 ?>
-
 <!-- Seção Histórico do Museu -->
 <?php
 $historico = new WP_Query( array( 'pagename' => 'pagina-principal/historico-do-museu' ) );
