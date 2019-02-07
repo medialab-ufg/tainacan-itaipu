@@ -1,4 +1,5 @@
 <?php
+
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles', 99 );
 function my_theme_enqueue_styles() {
 	wp_dequeue_style('tainacan_tainacanStyle'); // This remove the repeat parent style
