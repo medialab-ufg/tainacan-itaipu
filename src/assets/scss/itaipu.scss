@@ -259,7 +259,9 @@ nav.menu-belowheader {
 			.media {
 				flex-wrap: wrap;
 				img {
-					max-width: 300px;
+					max-width: 345px;
+					height: 280px;
+					object-fit: cover;
 				}
 				.media-body {
 					p {
@@ -274,6 +276,22 @@ nav.menu-belowheader {
 					}
 				}
 				margin-bottom: 2rem;
+			}
+		}
+	}
+	.front-page-historico {
+		.media-body {
+			.alignleft {
+				img {
+					padding-right: 33px;
+					padding-bottom: 0;
+					padding-left: 0;
+					padding-top: 12px;
+					max-width: 450px;
+				}
+				figcaption {
+					text-align: left;
+				}
 			}
 		}
 	}
@@ -348,6 +366,17 @@ hr.mi-hr {
     }
 }
 
+.tainacan-list-post {
+	.blog-post {
+		.blog-thumbnail img {
+			width: 300px;
+			height: 193px;
+			object-fit: cover;
+			object-position: top center;
+		}
+	}
+}
+
 .tainacan-footer {
 	background-color: #740d03 !important;
 	.tainacan-itaipu-footer--barra-logos {
@@ -370,5 +399,11 @@ hr.mi-hr {
 		@media only screen and (max-width: 576px) {
 			margin: 0 !important;
 		}
+	}
+}
+
+@media screen and (min-width: 992px) {
+	nav.menu-belowheader #menubelowHeader>ul>li.menu-item {
+		padding-right: 15px;
 	}
 }

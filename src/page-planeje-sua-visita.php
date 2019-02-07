@@ -5,8 +5,6 @@
 <!-- Get the menu if is create in panel admin -->
 <?php get_template_part( 'template-parts/menubellowbanner' ); ?>
 
-<?php get_template_part( 'template-parts/loop-collections-carousel' ); ?>
-
 <!-- Dados para exibição na seção de planeje sua visita -->
 <?php
 	$page = get_page_by_title( 'Planeje sua Visita' );
@@ -15,60 +13,6 @@
 	$cep_front = get_post_meta($page->ID, 'informacoes-front-cep', true);
 	$facebook_front = get_post_meta($page->ID, 'informacoes-front-facebook', true);
 ?>
-
-<!-- Seção Histórico do Museu -->
-<?php
-$historico = new WP_Query( array( 'pagename' => 'pagina-principal/historico-do-museu' ) );
-if($historico->have_posts()) :
-	while($historico->have_posts()) : $historico->the_post(); ?>
-		<div class="front-page mt-5 margin-two-column max-large">
-			<h1><?php the_title(); ?></h1>
-			<hr class="mi-hr title"/>
-		</div>
-
-		<div class="front-page mt-5 py-4 bg-color">
-			<section class="front-page-historico mt-2 margin-two-column max-large">
-				<h6>As ruinas e o museu</h6>
-				<div class="media mt-3">
-					<img src="<?php echo get_the_post_thumbnail_url(); ?>" class="mr-3" alt="...">
-					<div class="media-body">
-						<?php echo wp_trim_words( get_the_content(), 160, '...' ); ?>
-						<a style="color: #fff; float: right; margin-top: 2rem;" href="<?php the_permalink(); ?>">Leia mais...</a>
-					</div>
-				</div>
-			</section>
-		</div>
-	<?php endwhile; ?>
-<?php wp_reset_postdata(); endif; ?>
-
-<!-- Seção Exposições -->
-<?php
-$exposicoes = new WP_Query( array( 'pagename' => 'pagina-principal/exposicoes' ) );
-if($exposicoes->have_posts()) :
-	while($exposicoes->have_posts()) : $exposicoes->the_post(); ?>
-		<div class="front-page mt-5 mb-3 margin-two-column max-large">
-			<h1><?php the_title(); ?></h1>
-			<hr class="mi-hr title"/>
-			<section class="front-page-exposicoes mt-5 margin-one-column">
-				<?php echo wp_trim_words( get_the_content(), 500, '...' ); ?>
-				<a style="float: right; margin-top: 2rem; margin-bottom: 3rem;" href="<?php the_permalink(); ?>">Leia mais...</a>
-			</section>
-		</div>
-	<?php endwhile; ?>
-<?php wp_reset_postdata(); endif; ?>
-
-<!-- Seção de grid de itens ou coleções -->
-<div class="front-page mt-5 pb-5 max-large">
-	<div class="container-fluid d-flex flex-wrap justify-content-center front-page-grid p-0 m-0">
-		<?php foreach(get_images_to_front_grid() as $id => $image) :?>
-			<div class="m-2 front-page-grid-image">
-				<a href="<?php echo $image['link']; ?>">
-					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/'.$image["name"].'.png'; ?>" alt="">
-				</a>
-			</div>
-		<?php endforeach; ?>
-	</div>
-</div>
 
 <!-- Seção planeje sua visita -->
 <?php

@@ -23,7 +23,10 @@ function my_theme_enqueue_styles() {
  */
 function add_class_customize($colors) {
 	return <<<CSS
-	.front-page h1, .tainacan-single-post article .tainacan-content h1 { color: {$colors['tainacan_link_color']}; }
+    .front-page h1, .tainacan-single-post article .tainacan-content h1, .tainacan-single-post article .tainacan-content h6 { color: {$colors['tainacan_link_color']}; }
+    nav.menu-belowheader #menubelowHeader>ul>li.current_page_item>a, nav.menu-belowheader #menubelowHeader>ul>li.current-menu-item>a, .menu-item-has-children ul.show li.current_page_item>a, .menu-item-has-children ul.show li.current-menu-item>a {
+        border-color: {$colors['tainacan_link_color']};
+    }
 CSS;
 }
 add_filter('tainacan-customize-css-class', 'add_class_customize');
