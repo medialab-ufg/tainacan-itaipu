@@ -679,9 +679,13 @@ hr.mi-hr {
 		box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
 		z-index: 2;
 		transition: width 400ms ease-in-out;
-		@media only screen and (max-width: 576px) {
+		@media only screen and (max-width: 360px) {
 			top: 30%;
 			right: 2.5%;
+		}
+		@media only screen and (min-width: 365px) and (max-width: 768px) {
+			top: 30%;
+			right: 3.5%;
 		}
 		&.active { width: 353px; }
 		legend {
