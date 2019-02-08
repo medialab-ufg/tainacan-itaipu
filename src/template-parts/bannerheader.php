@@ -11,7 +11,7 @@ if(is_page()) {
 elseif( is_home() ) :
     $banner = 'class="page-header header-filter clear-filter page-height" style="background-image: url(' .$page_thumb. ')" ';
 elseif ( get_header_image() ) :
-    $banner = 'class="page-header header-filter clear-filter page-height" style="background-image: url(' . header_image(). ')"';
+    $banner = 'class="page-header header-filter clear-filter page-height" style="background-image: url(' . get_header_image() . ')"';
 else :
     $banner = 'class="page-header header-filter clear-filter align-items-center" style="background-image: url("' .get_template_directory_uri(). '/assets/images/capa.png" )"';
 endif; ?>
