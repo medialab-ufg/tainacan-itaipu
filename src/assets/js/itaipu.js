@@ -57,11 +57,21 @@ jQuery(document).ready(function($){
 	base.acessibilidade.manipularFontes();
 	base.acessibilidade.ativarAltoContraste();
 	base.jsNaoObstrusivo.ativar();
+	base.searchBox.manipular();
 
 	$('.menu-belowheader .margin-one-column').toggleClass('margin-one-column margin-two-column');
 	$('nav[aria-label=breadcrumb]').toggleClass('margin-one-column margin-two-column');
 	$('nav[aria-label=breadcrumb]').addClass('max-large');
 	$('main[role=main]').toggleClass('margin-one-column margin-two-column');
+
+	$('#mai-search').submit(function(e) {
+		e.preventDefault();
+		var val = $('#search-box__search').val();
+		if (val) {
+			window.location.href = mhn.search_target_url + '?search=' + val;
+		}
+		return;
+	});
 });
 
 var base = {
@@ -110,6 +120,36 @@ var base = {
 		ativar: function() {
 			jQuery('body').addClass('js');
 		}
-	}
+	},
+
+	searchBox: {
+		manipular: function() {
+			var _form = jQuery('.search-box');
+
+			_form
+				.find('button[type=submit]')
+				.on('click',function() {
+					// Se o form está fechado, o clique abre o formulário
+					if (!_form.hasClass('active')) {
+						_form.addClass('active');
+						_form.find('input[type=text]').attr('placeholder', 'Explore o acervo MHN');
+						return false;
+					} else {
+						// Se o campo estiver vazio, o clique no botão fecha o form novamente
+						var campo = _form.find('input[type=text]').val();
+						if (campo == '') {
+							_form.removeClass('active');
+							_form.find('input[type=text]').removeAttr('placeholder');
+
+							return false;
+						}
+					}
+			});
+
+			jQuery('#search-box__search').on('focus',function() {
+				_form.addClass('active');
+			});
+		}
+	},
 
 };
