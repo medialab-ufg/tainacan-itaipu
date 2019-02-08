@@ -1,5 +1,37 @@
 <?php
 
+if ( ! function_exists( 'tainacan_setup' ) ) {
+    function setup_mai() {
+        $logo_args = array(
+            'height'      => 200,
+            'width'       => 300,
+            'flex-width'  => true,
+            'flex-height' => true
+        );
+        add_theme_support( 'custom-logo', $logo_args );
+    }
+}
+add_action( 'after_setup_theme', 'setup_mai', 11 );
+
+/**
+ * get Logo function
+ *
+ * return custom logo or the default logo
+ */
+/* function mai_get_logo() {
+    $custom_logo_id = get_theme_mod( 'custom_logo' );
+    $logo = wp_get_attachment_image_src( $custom_logo_id );
+    /* echo '<pre>'; var_dump($logo); die;
+	if ( has_custom_logo() ) {
+		echo '<img src="'. esc_url( $logo[0] ) .'">';
+	} else {
+		$html = '<a class="navbar-brand tainacan-logo" href="' . esc_url( home_url() ) . '">';
+		$html .= '<h1>' . get_bloginfo( 'name' ) . '</h1>';
+		$html .= '</a>';
+		return $html;
+	}
+} */
+
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles', 99 );
 function my_theme_enqueue_styles() {
 	wp_dequeue_style('tainacan_tainacanStyle'); // This remove the repeat parent style
