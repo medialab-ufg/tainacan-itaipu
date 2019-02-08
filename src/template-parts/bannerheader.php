@@ -1,8 +1,22 @@
 <?php
-$page_thumb = get_the_post_thumbnail_url(get_the_ID());
+if(is_page()) {
+    $page_thumb = get_the_post_thumbnail_url(get_the_ID());
+} elseif(is_home()) {
+    $page_id = get_page_by_title( 'Eventos e Notícias' );
+    $page_thumb = get_the_post_thumbnail_url($page_id->ID);
+}
 ?>
+<?php if( ( is_page() ) && $page_thumb != '' ) :
+   $banner = 'class="page-header header-filter clear-filter page-height" style="background-image: url(' .$page_thumb. ')" ';
+elseif( is_home() ) :
+    $banner = 'class="page-header header-filter clear-filter page-height" style="background-image: url(' .$page_thumb. ')" ';
+elseif ( get_header_image() ) :
+    $banner = 'class="page-header header-filter clear-filter page-height" style="background-image: url(' . header_image(). ')"';
+else :
+    $banner = 'class="page-header header-filter clear-filter align-items-center" style="background-image: url("' .get_template_directory_uri(). '/assets/images/capa.png" )"';
+endif; ?>
 
-<div <?php if( is_page() && $page_thumb != '' ) : ?>class="page-header header-filter clear-filter page-height" style="background-image: url('<?php echo $page_thumb; ?>')" <?php elseif ( get_header_image() ) : ?>class="page-header header-filter clear-filter page-height" style="background-image: url('<?php header_image(); ?>')"<?php else : ?>class="page-header header-filter clear-filter align-items-center" style="background-image: url('<?php echo get_template_directory_uri() ?>/assets/images/capa.png')"<?php endif; ?>>
+<div <?php echo $banner; ?>>
 	<div class="container-fluid max-large p-0 ph-title-description">
 		<div class="bg-white-title title-header <?php if ( is_singular() || is_archive() || is_search() || is_home() ) { echo 'singular-title'; }?>">
 			<h1 class="mb-0 text-truncate">
@@ -37,7 +51,7 @@ $page_thumb = get_the_post_thumbnail_url(get_the_ID());
 		</div>
 	</div>
 
-	<form action="<?php echo site_url('reserva-tecnica/#/'); ?>" method="get" class="search-box" id="mai-search">
+	<form action="<?php echo home_url( '/' ); ?>" method="get" class="search-box" id="mai-search">
         <fieldset>
             <legend>Formulário de busca</legend>
 
