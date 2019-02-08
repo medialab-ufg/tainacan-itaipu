@@ -392,6 +392,7 @@ nav.menu-belowheader {
 	}
 	img.tainacan-list-collection--grid-img {
 		max-width: 170px;
+		margin-right: 1rem;
 	}
 	.image-placeholder {
 		@media only screen and (max-width: 576px) {
@@ -673,7 +674,9 @@ body.contraste {
 	}
 }
 
-nav.menu-shadow .max-large .tainacan-logo .logo {
-    max-height: 100%;
-    max-width: 100%;
+nav.menu-shadow {
+	.max-large .tainacan-logo .logo {
+		max-height: 100%;
+    	max-width: 100%;
+	}
 }
