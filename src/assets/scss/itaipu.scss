@@ -635,8 +635,7 @@ hr.mi-hr {
 	.title-header {
 		&.singular-title {
 			@media only screen and (min-width: 769px) {
-				padding: 1rem;
-				padding-left: 4.166667%;
+				padding: 1rem 4.166667%;
 			}
 			h1 {
 				font-size: 1.875rem;
