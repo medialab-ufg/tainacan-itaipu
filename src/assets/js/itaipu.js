@@ -132,7 +132,7 @@ var base = {
 					// Se o form está fechado, o clique abre o formulário
 					if (!_form.hasClass('active')) {
 						_form.addClass('active');
-						_form.find('input[type=text]').attr('placeholder', 'Explore o acervo MHN');
+						_form.find('input[type=text]').attr('placeholder', 'Explore o acervo MAI');
 						return false;
 					} else {
 						// Se o campo estiver vazio, o clique no botão fecha o form novamente
