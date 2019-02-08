@@ -2,7 +2,7 @@
 if(is_page()) {
     $page_thumb = get_the_post_thumbnail_url(get_the_ID());
 } elseif(is_home()) {
-    $page_id = get_page_by_title( 'Eventos e Notícias' );
+    $page_id = get_page_by_title( wp_title('') );
     $page_thumb = get_the_post_thumbnail_url($page_id->ID);
 }
 ?>
