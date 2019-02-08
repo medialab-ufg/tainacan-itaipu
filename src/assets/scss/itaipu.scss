@@ -495,6 +495,9 @@ nav.menu-belowheader {
 					padding-left: 0;
 					padding-top: 12px;
 					max-width: 450px;
+					@media only screen and (max-width: 576px) {
+						max-width: 100%;
+					}
 				}
 				figcaption {
 					text-align: left;
@@ -617,6 +620,23 @@ hr.mi-hr {
 
 .page-header {
 	align-items: flex-start;
+	@media only screen and (max-width: 576px) {
+		&.page-height {
+			margin-bottom: 4rem;
+			> div {
+				align-items: flex-end;
+				margin-bottom: 0 !important;
+			}
+		}
+		.title-header {
+			max-height: 80px;
+			&.singular-title {
+				h1 {
+					font-size: 1.575rem;
+				}
+			}
+		}
+	}
 	.collection-header--share {
 		top: 75%;
 		width: 50px;
@@ -630,6 +650,9 @@ hr.mi-hr {
 		top: -20px;
 		.bg-white-title {
 			background-color: #e2e4e7 !important
+		}
+		@media only screen and (max-width: 576px) {
+			top: 89%;
 		}
 	}
 	.title-header {
@@ -656,6 +679,10 @@ hr.mi-hr {
 		box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
 		z-index: 2;
 		transition: width 400ms ease-in-out;
+		@media only screen and (max-width: 576px) {
+			top: 30%;
+			right: 2.5%;
+		}
 		&.active { width: 353px; }
 		legend {
 			position: absolute;
@@ -766,7 +793,12 @@ body.contraste {
 nav.menu-shadow {
 	.max-large .tainacan-logo .logo {
 		max-height: 80px;
-    	max-width: 300px;
+		max-width: 300px;
+		@media only screen and (max-width: 576px) {
+			max-height: 100%;
+			height: auto;
+			max-width: 260px;
+		}
 	}
 	max-height: 75px;
 	.max-large {

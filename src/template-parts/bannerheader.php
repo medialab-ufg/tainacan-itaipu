@@ -19,7 +19,7 @@ endif; ?>
 <div <?php echo $banner; ?>>
 	<div class="container-fluid max-large p-0 ph-title-description">
 		<div class="bg-white-title title-header <?php if ( is_singular() || is_archive() || is_search() || is_home() ) { echo 'singular-title'; }?>">
-			<h1 class="mb-0 text-truncate">
+			<h1 class="mb-0">
 				<?php
 				if ( is_home() ) {
 					bloginfo( 'title' );
