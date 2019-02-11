@@ -210,6 +210,10 @@ noscript {
 }
 
 .carousel-destaque {
+	* { 
+		min-height: 0; 
+		min-width: 0; 
+	}
 	margin-bottom: 30px;
     position: relative;
 	.carousel-destaque--control {
@@ -273,6 +277,9 @@ noscript {
 						@media only screen and (max-width: 576px) {
 							align-items: unset;
 							min-height: 490px;
+						}
+						a {
+							min-width: 100%;
 						}
 					}
 				}
