@@ -214,7 +214,7 @@ noscript {
 		min-height: 0; 
 		min-width: 0; 
 	}
-	margin-bottom: 30px;
+	margin-bottom: 10px;
     position: relative;
 	.carousel-destaque--control {
 		width: 50px;
@@ -256,7 +256,7 @@ noscript {
 		list-style: none;
 		img {
 			width: 100%;
-			max-height: 450px;
+			max-height: 420px;
 			display: block;
 			object-fit: cover;
 			object-position: center 25%;
@@ -391,6 +391,13 @@ nav.menu-belowheader {
 .tainacan-list-post .tainacan-list-collection--container-card {
 	display: block !important;
 	width: 100%;
+	margin-top: 85px;
+	.slick-slide {
+		margin-right: 70px;
+	}
+	.tainacan-list-collection--card-link {
+		max-width: 213px;
+	}
 	.tainacan-list-collection--card-title {
 		max-width: 186px;
 		@media only screen and (max-width: 576px) {
@@ -398,7 +405,7 @@ nav.menu-belowheader {
 		}
 	}
 	img.tainacan-list-collection--grid-img {
-		max-width: 170px;
+		max-width: 213px;
 		margin-right: 1rem;
 	}
 	.image-placeholder {
@@ -409,6 +416,16 @@ nav.menu-belowheader {
 }
 
 .front-page {
+	margin-bottom: 170px !important;
+	&.planeje-visita {
+		margin-bottom: 85px !important;
+	}
+	&.historico-museu-title {
+		margin-bottom: 55px !important;
+	}
+	&.historico-museu-content {
+		margin-bottom: 150px !important;
+	}
 	h1 {
 		font-size: 24px;
 		font-weight: 600;
@@ -469,27 +486,51 @@ nav.menu-belowheader {
 	&.bg-color {
 		background-color: #740d03;
 		color: #fff;
+		h5 {
+			font-weight: 700;
+		}
 		.front-page-historico {
 			.media {
 				flex-wrap: wrap;
+				margin-bottom: 2rem;
 				img {
-					max-width: 345px;
-					height: 280px;
+					width: 320px;
+    				height: 320px;
 					object-fit: cover;
 				}
 				.media-body {
 					p {
 						margin-left: 4.16666666667%;
 						line-height: 1.2;
-						@media only screen and (max-width: 576px) {
-							margin-top: 1rem;
-						}
 						color: #fff;
 						font-size: 1rem;
-    					font-weight: 400;
+						font-weight: 400;
+						text-align: justify;
+						@media only screen and (max-width: 576px) {
+							margin-top: 1rem;
+							margin-left: 0;
+						}
+					}
+					.more-link {
+						color: #fff;
+						float: right;
+						margin-top: 2rem;
+						font-size: 0.875rem;
+					}
+					figcaption {
+						display: none;
+					}
+					@media only screen and (max-width: 576px) {
+						.alignleft {
+							margin: 0;
+							margin-bottom: 2rem;
+							img {
+								padding: 0;
+
+							}
+						}
 					}
 				}
-				margin-bottom: 2rem;
 			}
 		}
 	}
@@ -513,9 +554,16 @@ nav.menu-belowheader {
 		}
 	}
 	.front-page-exposicoes {
+		margin-top: 85px !important;
 		p {
 			color: #000;
 			font-size: 1rem;
+		}
+		.more-link {
+			float: right;
+			margin-bottom: 3rem;
+			margin-top: 2rem;
+			font-size: 0.875rem;
 		}
 	}
 	.front-page-grid {
@@ -598,7 +646,7 @@ hr.mi-hr {
 	background-color: #740d03 !important;
 	.tainacan-itaipu-footer--barra-logos {
 		padding-bottom: 50px !important;
-		margin-top: 50px;
+		margin-top: 70px;
 		.col-12 {
 			align-self: center;
 		}

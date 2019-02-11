@@ -53,9 +53,9 @@ if ( get_option( 'tainacan_blogphone' ) ) {
         <hr class="bg-scooter" style="background-color: #c34250 !important;"/>
         <div class="row p-4 tainacan-itaipu-footer--barra-logos text-white text-center">
 			<div class="col-12 col-sm d-none d-md-block"></div>
-            <div class="col-12 col-sm mb-3 mb-md-0"><img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/sbm.png" alt=""></div>
-            <div class="col-12 col-sm mb-3 mb-md-0"><img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/ibram.png" alt=""></div>
-            <div class="col-12 col-sm mb-3 mb-md-0"><img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/gov_horizontal.svg" class="not-width" alt=""></div>
+            <div class="col-12 col-sm mb-3 mb-md-0"><img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/sbm.png" style="width: 120px; height: 47px" alt=""></div>
+            <div class="col-12 col-sm mb-3 mb-md-0"><img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/ibram.png" style="width: 134px; height: 54px" alt=""></div>
+            <div class="col-12 col-sm mb-3 mb-md-0"><img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/governo.png" style="width: 350px; height: 62px" alt=""></div>
             <div class="col-12 col-sm d-none d-md-block"></div>
         </div>
 	</footer>

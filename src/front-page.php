@@ -21,19 +21,17 @@
 $historico = new WP_Query( array( 'pagename' => 'pagina-principal/historico-do-museu' ) );
 if($historico->have_posts()) :
 	while($historico->have_posts()) : $historico->the_post(); ?>
-		<div class="front-page mt-5 margin-two-column max-large">
+		<div class="front-page historico-museu-title mt-5 margin-two-column max-large">
 			<h1><?php the_title(); ?></h1>
 			<hr class="mi-hr title"/>
 		</div>
 
-		<div class="front-page mt-5 py-4 bg-color">
+		<div class="front-page historico-museu-content mt-5 py-4 bg-color">
 			<section class="front-page-historico mt-2 margin-two-column max-large">
-				<h6>As ruinas e o museu</h6>
+				<h5>As ruinas e o museu</h5>
 				<div class="media mt-3">
-					<img src="<?php echo get_the_post_thumbnail_url(); ?>" class="mr-3" alt="...">
 					<div class="media-body">
-						<?php echo wp_trim_words( get_the_content(), 160, '...' ); ?>
-						<a style="color: #fff; float: right; margin-top: 2rem;" href="<?php the_permalink(); ?>">Leia mais...</a>
+						<?php the_content('Leia mais...'); ?>
 					</div>
 				</div>
 			</section>
@@ -50,8 +48,7 @@ if($exposicoes->have_posts()) :
 			<h1><?php the_title(); ?></h1>
 			<hr class="mi-hr title"/>
 			<section class="front-page-exposicoes mt-5 margin-one-column">
-				<?php echo wp_trim_words( get_the_content(), 500, '...' ); ?>
-				<a style="float: right; margin-top: 2rem; margin-bottom: 3rem;" href="<?php the_permalink(); ?>">Leia mais...</a>
+				<?php the_content('Leia mais...'); ?>
 			</section>
 		</div>
 	<?php endwhile; ?>
@@ -75,7 +72,7 @@ if($exposicoes->have_posts()) :
 $planeje = new WP_Query( array( 'pagename' => 'pagina-principal/planeje-sua-visita' ) );
 if($planeje->have_posts()) :
 	while($planeje->have_posts()) : $planeje->the_post(); ?>
-		<div class="front-page mt-5 margin-two-column max-large">
+		<div class="front-page planeje-visita mt-5 margin-two-column max-large">
 			<h1><?php the_title() ?></h1>
 			<hr class="mi-hr title"/>
 		</div>
