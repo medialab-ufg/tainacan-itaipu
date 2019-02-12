@@ -432,6 +432,12 @@ nav.menu-belowheader {
 	&.collections {
 		margin-bottom: 85px !important;
 	}
+	&.contato-page {
+		margin-bottom: 85px !important;
+	}
+	&.eventos-noticias {
+		margin-bottom: 85px !important;
+	}
 	h1 {
 		font-size: 24px;
 		font-weight: 600;
@@ -853,13 +859,13 @@ body.contraste {
 
 .btn-mai {
 	color: #fff;
-    background-color: #25a189;
-	border-color: #25a189;
+    background-color: #740d03;
+	border-color: #740d03;
 	border-radius: 0;
 	&:hover {
 		color: #fff;
-		background-color: #25a189;
-		border-color: #25a189;
+		background-color: #740d03;
+		border-color: #740d03;
 	}
 	&:focus {
 		box-shadow: none;

@@ -59,10 +59,10 @@ jQuery(document).ready(function($){
 	base.jsNaoObstrusivo.ativar();
 	base.searchBox.manipular();
 
-	$('.menu-belowheader .margin-one-column').toggleClass('margin-one-column margin-two-column');
-	$('nav[aria-label=breadcrumb]').toggleClass('margin-one-column margin-two-column');
+	$('.menu-belowheader .margin-one-column').removeClass('margin-one-column').addClass('margin-two-column');
+	$('nav[aria-label=breadcrumb]').removeClass('margin-one-column').addClass('margin-two-column');
 	$('nav[aria-label=breadcrumb]').addClass('max-large');
-	$('main[role=main]').toggleClass('margin-one-column margin-two-column');
+	$('main[role=main]').removeClass('margin-one-column').addClass('margin-two-column');
 
 	$('#mai-search').submit(function(e) {
 		e.preventDefault();

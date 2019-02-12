@@ -1,8 +1,9 @@
+<?php global $wp; ?>
 <?php
 if(is_page()) {
     $page_thumb = get_the_post_thumbnail_url(get_the_ID());
 } elseif(is_home()) {
-    $page_id = get_page_by_title( wp_title('') );
+    $page_id = get_page_by_path($wp->query_vars["pagename"]);
     $page_thumb = get_the_post_thumbnail_url($page_id->ID);
 }
 ?>
@@ -60,7 +61,6 @@ endif; ?>
         </fieldset>
     </form>
 
-    <?php global $wp; ?>
     <div class="collection-header--share collection-header--type-b">
         <div class="btn trigger">
             <span class="mdi mdi-share-variant"></span>

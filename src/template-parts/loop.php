@@ -1,6 +1,6 @@
 <?php if ( have_posts() ) : ?>
 	<div class="tainacan-title">
-		<div class="front-page tainacan-title-page">
+		<div class="front-page tainacan-title-page eventos-noticias">
 			<h1>
 				<?php if ( is_home() ) {
 					if ( get_option( 'page_for_posts' ) ) :

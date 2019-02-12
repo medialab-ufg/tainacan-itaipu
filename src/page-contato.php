@@ -17,7 +17,7 @@
 <!-- Seção planeje sua visita -->
 <?php if(have_posts()) :
 	while(have_posts()) : the_post(); ?>
-		<div class="front-page mt-5 margin-two-column max-large">
+		<div class="front-page contato-page margin-two-column max-large">
 			<h1><?php the_title() ?></h1>
 			<hr class="mi-hr title"/>
 		</div>
