@@ -426,6 +426,9 @@ nav.menu-belowheader {
 	&.historico-museu-content {
 		margin-bottom: 150px !important;
 	}
+	&.to-pages {
+		margin-bottom: 85px !important;
+	}
 	h1 {
 		font-size: 24px;
 		font-weight: 600;
@@ -489,6 +492,9 @@ nav.menu-belowheader {
 		h5 {
 			font-weight: 700;
 		}
+		h1 {
+			display: none !important;
+		}
 		.front-page-historico {
 			.media {
 				flex-wrap: wrap;
@@ -536,6 +542,10 @@ nav.menu-belowheader {
 	}
 	.front-page-historico {
 		.media-body {
+			h1 {
+				font-size: 20px;
+				margin-top: 70px;
+			}
 			.alignleft {
 				img {
 					padding-right: 33px;
@@ -550,6 +560,10 @@ nav.menu-belowheader {
 				figcaption {
 					text-align: left;
 				}
+			}
+			p {
+				font-size: 16px;
+				color: #000;
 			}
 		}
 	}
@@ -868,4 +882,9 @@ nav.menu-shadow {
 div#wrapper-barra-brasil {
     margin: 0 4.16666666667% !important;
     max-width: 1237px !important;
+}
+
+[aria-label=breadcrumb] {
+	margin-top: 25px !important;
+	margin-bottom: 65px;
 }
