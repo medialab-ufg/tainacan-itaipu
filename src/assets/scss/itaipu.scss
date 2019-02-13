@@ -294,6 +294,7 @@ noscript {
 			display: block !important;
 			@extend .center-absolute;
 			right: -1px;
+			z-index: 9;
 			@media only screen and (max-width: 576px) {
 				width: 35px;
 				top: 15%;
@@ -327,8 +328,8 @@ noscript {
 		.carousel-destaque--loop-content {
 			background-color: #f1f1f1;
 			max-width: 600px;
-			min-height: 275px;
-			padding: 1rem 4.16666666667%;
+			height: 275px;
+			padding: 2.55rem 4.16666666667%;
 			position: absolute;
 			/* top: 28%; */
 			@media only screen and (max-width: 576px) {
@@ -342,6 +343,7 @@ noscript {
 					size: 40px;
 					weight: bold;
 				}
+				line-height: 1;
 				&:hover {
 					text-decoration: none;
 				}
@@ -358,23 +360,22 @@ noscript {
 				}
 			}
 			.carousel-destaque--loop-content-description {
-				p {
-					font: {
-						size: 18px;
-						weight: 400;
-					}
-					@media only screen and (max-width: 576px) {
-						font: {
-							size: 14px;
-						}
-						margin-top: 1rem;
-					}
-					@media only screen and (min-width: 577px) and (max-width: 768px) {
-						font: {
-							size: 16px;
-						}	
-					}
+				font: {
+					size: 18px;
+					weight: 400;
 				}
+				@media only screen and (max-width: 576px) {
+					font: {
+						size: 14px;
+					}
+					margin-top: 1rem;
+				}
+				@media only screen and (min-width: 577px) and (max-width: 768px) {
+					font: {
+						size: 16px;
+					}	
+				}
+				margin-top: 35px;
 			}
 		}
 	}
@@ -382,6 +383,9 @@ noscript {
 
 nav.menu-belowheader {
 	border-bottom-color: #b4b4b4 !important;
+	@media only screen and (min-width: 992px) {
+		height: 65px;
+	}
 }
 
 .slick-prev:before, .slick-next:before {
@@ -391,7 +395,7 @@ nav.menu-belowheader {
 .tainacan-list-post .tainacan-list-collection--container-card {
 	display: block !important;
 	width: 100%;
-	margin-top: 85px;
+	margin-top: 65px;
 	.slick-slide {
 		margin-right: 70px;
 	}
@@ -400,6 +404,7 @@ nav.menu-belowheader {
 	}
 	.tainacan-list-collection--card-title {
 		max-width: 186px;
+		padding: 1rem 1rem 1rem 0;
 		@media only screen and (max-width: 576px) {
 			margin-left: 65px;
 		}
@@ -437,6 +442,15 @@ nav.menu-belowheader {
 	}
 	&.eventos-noticias {
 		margin-bottom: 85px !important;
+	}
+	&.loop-collection-destaque {
+		margin-top: 90px !important;
+	}
+	&.exposicoes-text {
+		margin-bottom: 156px !important;
+	}
+	&.dados-visita {
+		margin-bottom: 147px !important;
 	}
 	h1 {
 		font-size: 24px;
@@ -505,9 +519,13 @@ nav.menu-belowheader {
 			display: none !important;
 		}
 		.front-page-historico {
+			margin-top: 16px;
+			h5 {
+				margin-bottom: 28px;
+			}
 			.media {
 				flex-wrap: wrap;
-				margin-bottom: 2rem;
+				margin-bottom: 1.4rem;
 				img {
 					width: 320px;
     				height: 320px;
@@ -624,8 +642,11 @@ nav.menu-belowheader {
 		.front-page-grid--planeje-contato {
 			background-color: #740d03;
 			color: #fff;
+			max-height: 425px;
 			h5 {
 				font-weight: 600;
+				margin-top: 5px;
+				margin-bottom: 33px;
 			}
 			p {
 				margin-bottom: 0;
@@ -873,6 +894,7 @@ body.contraste {
 }
 
 nav.menu-shadow {
+	margin-bottom: 40px;
 	.max-large .tainacan-logo .logo {
 		max-height: 80px;
 		max-width: 300px;

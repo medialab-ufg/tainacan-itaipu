@@ -8,7 +8,7 @@ $args = array(
 $query = new WP_Query($args);
 
 if ( $query->have_posts() ) : ?>
-	<div class="tainacan-list-post front-page px-md-0 mt-5 margin-two-column max-large">
+	<div class="tainacan-list-post front-page loop-collection-destaque px-md-0 mt-5 margin-two-column max-large">
 		<h1>Coleções em Destaque</h1>
 		<!-- <p>Subtítulo, se necessário for.</p> -->
 		<hr class="mi-hr title"/>
@@ -19,7 +19,7 @@ if ( $query->have_posts() ) : ?>
 			?>
 				<a class="tainacan-list-collection--card-link" href="<?php echo $url; ?>">
 					<div class="tainacan-list-collection--card">
-						<p class="tainacan-list-collection--card-title text-black text-left p-3 mb-0 text-truncate">
+						<p class="tainacan-list-collection--card-title text-black text-left mb-0 text-truncate">
 							<?php the_title(); ?>           
 						</p>
 						<?php if ( has_post_thumbnail() ) : 

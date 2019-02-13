@@ -27,7 +27,7 @@ if($historico->have_posts()) :
 		</div>
 
 		<div class="front-page historico-museu-content mt-5 py-4 bg-color">
-			<section class="front-page-historico mt-2 margin-two-column max-large">
+			<section class="front-page-historico margin-two-column max-large">
 				<h5>As ruinas e o museu</h5>
 				<div class="media mt-3">
 					<div class="media-body">
@@ -44,7 +44,7 @@ if($historico->have_posts()) :
 $exposicoes = new WP_Query( array( 'pagename' => 'pagina-principal/exposicoes' ) );
 if($exposicoes->have_posts()) :
 	while($exposicoes->have_posts()) : $exposicoes->the_post(); ?>
-		<div class="front-page mt-5 mb-3 margin-two-column max-large">
+		<div class="front-page exposicoes-text mt-5 margin-two-column max-large">
 			<h1><?php the_title(); ?></h1>
 			<hr class="mi-hr title"/>
 			<section class="front-page-exposicoes mt-5 margin-one-column">
@@ -55,10 +55,10 @@ if($exposicoes->have_posts()) :
 <?php wp_reset_postdata(); endif; ?>
 
 <!-- Seção de grid de itens ou coleções -->
-<div class="front-page mt-5 pb-5 max-large">
+<div class="front-page max-large">
 	<div class="container-fluid d-flex flex-wrap justify-content-center front-page-grid p-0 m-0">
 		<?php foreach(get_images_to_front_grid() as $id => $image) :?>
-			<div class="m-2 front-page-grid-image">
+			<div class="m-1 front-page-grid-image">
 				<a href="<?php echo $image['link']; ?>">
 					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/'.$image["name"].'.png'; ?>" alt="">
 				</a>
@@ -72,12 +72,12 @@ if($exposicoes->have_posts()) :
 $planeje = new WP_Query( array( 'pagename' => 'pagina-principal/planeje-sua-visita' ) );
 if($planeje->have_posts()) :
 	while($planeje->have_posts()) : $planeje->the_post(); ?>
-		<div class="front-page planeje-visita mt-5 margin-two-column max-large">
+		<div class="front-page planeje-visita margin-two-column max-large">
 			<h1><?php the_title() ?></h1>
 			<hr class="mi-hr title"/>
 		</div>
 
-		<section class="front-page mt-5 max-large">
+		<section class="front-page dados-visita max-large">
 			<div class="container-fluid front-page-grid p-0 m-0">
 				<div class="row m-0">
 					<div class="col-sm-7 front-page-grid--planeje-dados">

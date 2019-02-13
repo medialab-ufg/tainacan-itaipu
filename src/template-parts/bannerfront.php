@@ -20,9 +20,9 @@ if( $posts_to_front->have_posts() ) : ?>
 								<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="carousel-destaque--loop-content-title">
 									<?php the_title(); ?>
 								</a>
-								<span class="carousel-destaque--loop-content-description">
-									<?php the_excerpt(); ?>
-								</span>
+								<div class="carousel-destaque--loop-content-description">
+									<?php echo wp_trim_words( get_the_content(), 25, '.' ); ?>
+								</div>
 							</div>
 						</li>
 					<?php endif; ?>
