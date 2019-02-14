@@ -724,8 +724,12 @@ hr.mi-hr {
 
 .page-header {
 	align-items: flex-start;
-	.change-position {
-		background-position: 0 top;
+	&.change-position-contato {
+		background-position: right top;
+    	background-size: 190%;
+	}
+	&.change-position-historico {
+		background-position: center 80%;
 	}
 	&.page-height {
 		height: 420px;
