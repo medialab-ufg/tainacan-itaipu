@@ -724,6 +724,12 @@ hr.mi-hr {
 
 .page-header {
 	align-items: flex-start;
+	.change-position {
+		background-position: 0 top;
+	}
+	&.page-height {
+		height: 420px;
+	}
 	@media only screen and (max-width: 576px) {
 		&.page-height {
 			margin-bottom: 4rem;
@@ -783,13 +789,13 @@ hr.mi-hr {
 		box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
 		z-index: 2;
 		transition: width 400ms ease-in-out;
-		@media only screen and (max-width: 360px) {
-			top: 30%;
-			right: 2.5%;
+		@media only screen and (max-width: 380px) {
+			top: 30% !important;
+			right: 2.5% !important;
 		}
-		@media only screen and (min-width: 365px) and (max-width: 768px) {
-			top: 30%;
-			right: 3.5%;
+		@media only screen and (min-width: 381px) and (max-width: 768px) {
+			top: 30% !important;
+			right: 3.5% !important;
 		}
 		&.active { width: 353px; }
 		legend {
@@ -899,7 +905,9 @@ body.contraste {
 }
 
 nav.menu-shadow {
-	margin-bottom: 40px;
+	@media only screen and (min-width: 576px) {
+		margin-bottom: 40px;
+	}
 	.max-large .tainacan-logo .logo {
 		max-height: 34px;
     	max-width: 317px;
@@ -916,7 +924,7 @@ nav.menu-shadow {
 }
 
 div#wrapper-barra-brasil {
-    margin: 0 4.16666666667% !important;
+    padding: 0 4.16666666667% !important;
 	width: 100% !important;
 	@media only screen and (max-width: 576px) {
 		margin: auto !important;
