@@ -693,6 +693,14 @@ hr.mi-hr {
 		margin-top: 70px;
 		.col-12 {
 			align-self: center;
+			img {
+				&.governo {
+					@media only screen and (max-width: 576px) {
+						width: 270px !important;
+						height: auto !important;
+					}
+				}
+			}
 		}
 		img:not(.not-width) {
 			width: 140px;
@@ -913,6 +921,9 @@ nav.menu-shadow {
 div#wrapper-barra-brasil {
     margin: 0 4.16666666667% !important;
 	width: 100% !important;
+	@media only screen and (max-width: 576px) {
+		margin: auto !important;
+	}
 	@media only screen and (min-width: 1800px) {
 		max-width: 1400px;
 		margin-left: auto !important;

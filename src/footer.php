@@ -55,7 +55,7 @@ if ( get_option( 'tainacan_blogphone' ) ) {
 			<div class="col-12 col-sm d-none d-md-block"></div>
             <div class="col-12 col-sm mb-3 mb-md-0"><img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/sbm.png" style="width: 120px; height: 47px" alt=""></div>
             <div class="col-12 col-sm mb-3 mb-md-0"><img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/ibram.png" style="width: 134px; height: 54px" alt=""></div>
-            <div class="col-12 col-sm mb-3 mb-md-0"><img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/governo.png" style="width: 350px; height: 62px" alt=""></div>
+            <div class="col-12 col-sm mb-3 mb-md-0"><img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/governo.png" style="width: 350px; height: 62px" class="governo" alt=""></div>
             <div class="col-12 col-sm d-none d-md-block"></div>
         </div>
 	</footer>
