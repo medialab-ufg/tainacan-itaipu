@@ -3,6 +3,8 @@
 //Verify if is page Contato
 $contato_class = (is_page('Contato') || is_page( 'Como Chegar' )) ? 'change-position-contato' : '';
 
+$acervo_class = ( is_archive('colecoes') || is_archive('collections') ) ? 'change-position-acervo' : 's';
+
 if(is_page()) {
     $page_thumb = get_the_post_thumbnail_url(get_the_ID());
 } elseif(is_home()) {
@@ -15,7 +17,7 @@ if(is_page()) {
 elseif( is_home() ) :
     $banner = 'class="page-header header-filter clear-filter page-height" style="background-image: url(' .$page_thumb. ')" ';
 elseif ( get_header_image() ) :
-    $banner = 'class="page-header header-filter clear-filter page-height" style="background-image: url(' . get_header_image() . ')"';
+    $banner = 'class="page-header header-filter clear-filter page-height '. $acervo_class .'" style="background-image: url(' . get_header_image() . ')"';
 else :
     $banner = 'class="page-header header-filter clear-filter align-items-center" style="background-image: url("' .get_template_directory_uri(). '/assets/images/capa.png" )"';
 endif; ?>
