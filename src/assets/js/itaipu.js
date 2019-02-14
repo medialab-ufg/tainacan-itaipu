@@ -44,7 +44,7 @@ jQuery(document).ready(function($){
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1,
-					variableWidth: false
+					centerMode: true
 				}
 			}
 			// You can unslick at a given breakpoint now by adding:
