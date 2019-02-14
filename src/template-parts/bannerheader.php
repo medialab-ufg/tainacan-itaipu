@@ -3,9 +3,6 @@
 //Verify if is page Contato
 $contato_class = (is_page('Contato') || is_page( 'Como Chegar' )) ? 'change-position-contato' : '';
 
-//Verify if is page Historico
-$historico_class = (is_page( 'Histórico do Museu' )) ? 'change-position-historico' : '';
-
 if(is_page()) {
     $page_thumb = get_the_post_thumbnail_url(get_the_ID());
 } elseif(is_home()) {
@@ -14,7 +11,7 @@ if(is_page()) {
 }
 ?>
 <?php if( ( is_page() ) && $page_thumb != '' ) :
-   $banner = 'class="page-header header-filter clear-filter page-height '. $contato_class .' '. $historico_class .'" style="background-image: url(' .$page_thumb. ')" ';
+   $banner = 'class="page-header header-filter clear-filter page-height '. $contato_class .'" style="background-image: url(' .$page_thumb. ')" ';
 elseif( is_home() ) :
     $banner = 'class="page-header header-filter clear-filter page-height" style="background-image: url(' .$page_thumb. ')" ';
 elseif ( get_header_image() ) :
