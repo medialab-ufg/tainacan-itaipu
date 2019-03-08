@@ -14,6 +14,6 @@
 <?php get_template_part( 'template-parts/menubellowbanner' ); ?>
 
 <div class="front-page collections margin-two-column max-large">
-    <h1>Lista de coleções</h1>
+    <h1><?php tainacan_the_collection_name(); ?></h1>
     <hr class="mi-hr title"/>
 </div>

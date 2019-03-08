@@ -59,7 +59,7 @@ if($exposicoes->have_posts()) :
 	<div class="container-fluid d-flex flex-wrap justify-content-center front-page-grid p-0 m-0">
 		<?php foreach(get_images_to_front_grid() as $id => $image) :?>
 			<div class="m-1 front-page-grid-image">
-				<a href="<?php echo $image['link']; ?>">
+				<a href="<?php echo $image['urlFixa']; ?>">
 					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/'.$image["name"].'.png'; ?>" alt="">
 				</a>
 			</div>
