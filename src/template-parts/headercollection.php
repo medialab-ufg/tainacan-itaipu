@@ -36,7 +36,7 @@
 	elseif ( get_header_image() ) :
 		$banner = 'class="page-header header-filter clear-filter page-height" style="background-image: url(' . get_header_image() . ')"';
 	else :
-		$banner = 'class="page-header header-filter clear-filter align-items-center" style="background-image: url("' .get_template_directory_uri(). '/assets/images/capa.png" )"';
+		$banner = 'class="page-header header-filter clear-filter align-items-center mt-5" style="background-image: url("' .get_template_directory_uri(). '/assets/images/capa.png" )"';
 	endif;
 ?>
 
