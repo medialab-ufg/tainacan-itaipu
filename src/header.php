@@ -72,3 +72,5 @@
 	</nav>
 
 	<a href="javascript:" id="return-to-top"><i class="mdi mdi-menu-up"></i></a>
+
+	<?php get_template_part( 'template-parts/menubellowbanner' ); ?>
