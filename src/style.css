@@ -11,3 +11,12 @@
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  tainacan-interface-child
 */
+
+/* CORREÇÕES TEMPORÁRIAS */
+
+.front-page .front-page-historico .media-body .alignleft { float: left; }
+.front-page .front-page-historico .media-body .alignleft img { padding: 4px 33px 0 0; }
+.page-header.page-height {
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
