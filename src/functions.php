@@ -220,48 +220,39 @@ function get_images_to_front_grid() {
     $images = [
         '1' => [
             'name' => 'CAMS-001_2',
-            'link' => get_permalink(12094),
-            'urlFixa' => 'https://museuitaipu.medialab.ufg.br/museu-itaipu/cams-001-2/'
+            'slug' => 'cams-001-2'
         ],
         '2' => [
             'name' => 'CAMS-014_2',
-            'link' => get_permalink(12174),
-            'urlFixa' => 'https://museuitaipu.medialab.ufg.br/museu-itaipu/cams-014-2/'
+            'slug' => 'cams-014-2'
         ],
         '3' => [
             'name' => 'JC-18-209_3',
-            'link' => get_permalink(16750),
-            'urlFixa' => 'https://museuitaipu.medialab.ufg.br/museu-itaipu/jc-18-209-2/'
+            'slug' => 'jc-18-209-2'
         ],
         '4' => [
             'name' => 'JC-18-413_1',
-            'link' => get_permalink(18368),
-            'urlFixa' => 'https://museuitaipu.medialab.ufg.br/museu-itaipu/jc-18-413-2/'
+            'slug' => 'jc-18-413-2'
         ],
         '5' => [
             'name' => 'JC-18-960-Duplicado_2',
-            'link' => get_permalink(18024),
-            'urlFixa' => 'https://museuitaipu.medialab.ufg.br/museu-itaipu/jc-18-960-2/'
+            'slug' => 'jc-18-960-2'
         ],
         '6' => [
             'name' => 'PST-001_1',
-            'link' => get_permalink(11998),
-            'urlFixa' => 'https://museuitaipu.medialab.ufg.br/museu-itaipu/pst-001-2/'
+            'slug' => 'pst-001-2'
         ],
         '7' => [
             'name' => 'RMN-103_1',
-            'link' => get_permalink(19652),
-            'urlFixa' => 'https://museuitaipu.medialab.ufg.br/museu-itaipu/rmn-103-2/'
+            'slug' => 'rmn-103-2'
         ],
         '8' => [
             'name' => 'RPR-6_1',
-            'link' => get_permalink(12046),
-            'urlFixa' => 'https://museuitaipu.medialab.ufg.br/museu-itaipu/rpr-6-2/'
+            'slug' => 'rpr-6-2'
         ],
         '9' => [
             'name' => 'TMT-02_1',
-            'link' => get_permalink(12080),
-            'urlFixa' => 'https://museuitaipu.medialab.ufg.br/museu-itaipu/tmt-02-4/'
+            'slug' => 'tmt-02-4'
         ]
     ];
 
