@@ -48,6 +48,8 @@ function my_theme_enqueue_styles() {
     wp_enqueue_style( 'itaipu', get_stylesheet_directory_uri() . '/assets/css/itaipu.min.css');
 
     wp_enqueue_script('itaipujs', get_stylesheet_directory_uri() . '/assets/js/itaipu.min.js', array('jquery'), '', true);
+	
+	wp_enqueue_style('material-design-icons-cdn-style', 'https://cdn.materialdesignicons.com/2.8.94/css/materialdesignicons.min.css', null, microtime());
 }
 
 /**
