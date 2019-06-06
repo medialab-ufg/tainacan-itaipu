@@ -20,3 +20,8 @@
 	margin-top: 30px;
 	margin-bottom: 20px;
 }
+
+.collection-header--share .btn {
+	padding: .375rem .75rem;
+	font-size: 1.5rem;
+}
