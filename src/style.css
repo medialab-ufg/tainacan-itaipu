@@ -25,3 +25,16 @@
 	padding: .375rem .75rem;
 	font-size: 1.5rem;
 }
+
+.carousel-destaque .carousel-destaque--control button.control__prev i:before { transform: rotate(-180deg); }
+
+.page-header .search-box { top: 40% !important; }
+.page-header .collection-header--share {
+	margin-right: 0;
+	left: auto;
+	right: 3.5%;
+	transform: translateX(0) translateY(0);
+}
+.page-header .collection-header--share .btn.trigger,
+.page-header .collection-header--share.active .rotater:nth-child(2) .btn-icon,
+.page-header .collection-header--share.active .rotater:nth-child(1) .btn-icon { box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28) !important; }

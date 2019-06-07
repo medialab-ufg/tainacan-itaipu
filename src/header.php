@@ -57,11 +57,11 @@
 					<form class="form-horizontal my-2 my-md-0 tainacan-search-form d-none d-md-block" [formGroup]="searchForm" role="form" (keyup.enter)="onSubmit()" action="<?php echo home_url( '/' ); ?>">
 						<div class="input-group">
 							<input type="text" name="s" placeholder="<?php esc_attr_e( 'Search', 'tainacan-interface' ); ?>" class="form-control" formControlName="searchText" size="50">
-							<span class="text-midnight-blue input-group-btn mdi mdi-magnify form-control-feedback"></span>
+							<span class="text-midnight-blue input-group-btn tainacan-icon tainacan-icon-search form-control-feedback"></span>
 						</div>
 					</form>
 					<div class="dropdown tainacan-form-dropdown d-md-none">
-						<a class="btn btn-link text-midnight-blue px-1 dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="mdi mdi-magnify"></i></a>
+						<a class="btn btn-link text-midnight-blue px-1 dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="tainacan-icon tainacan-icon-search"></i></a>
 
 						<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 							<?php get_search_form(); ?>
@@ -71,6 +71,6 @@
 		</div>
 	</nav>
 
-	<a href="javascript:" id="return-to-top"><i class="mdi mdi-menu-up"></i></a>
+	<a href="javascript:" id="return-to-top"><i class="tainacan-icon tainacan-icon-arrowup"></i></a>
 
 	<?php get_template_part( 'template-parts/menubellowbanner' ); ?>

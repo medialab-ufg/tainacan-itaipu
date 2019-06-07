@@ -841,7 +841,8 @@ hr.mi-hr {
 			border-radius: 50%;
 			border: none;
 			background: none;
-			i.mdi{ border-radius: 50%; }
+			i.mdi,
+			i.tainacan-icon { border-radius: 50%; }
 			&:focus {
 				outline: none;
 			}

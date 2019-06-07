@@ -4,8 +4,8 @@ if( $posts_to_front->have_posts() ) : ?>
 	<div class="margin-one-column no-mobile">
 		<div class="container-fluid p-0 carousel-destaque max-large">
 			<div class="carousel-destaque--control">
-				<button type="button" class="control__prev"><i class="mdi mdi-chevron-up"></i></button>
-				<button type="button" class="control__next"><i class="mdi mdi-chevron-down"></i></button>
+				<button type="button" class="control__prev"><i class="tainacan-icon tainacan-icon-showmore"></i></button>
+				<button type="button" class="control__next"><i class="tainacan-icon tainacan-icon-showmore"></i></button>
 			</div>
 			<ul class="carousel-destaque--loop">
 				<?php 
